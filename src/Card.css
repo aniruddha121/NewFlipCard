@@ -1,0 +1,52 @@
+.maincontainer {
+  /* position:relative; */
+  width: 540px;
+  height: 540px;
+  perspective: 100%;
+  background-image: radial-gradient(
+    farthest-corner at 40px 50px,
+    #fff 20%,
+    #c2fbfb 40%,
+    #77f6f6 90%
+  );
+}
+
+.thecard {
+  position: relative;
+  width: 50%;
+  height: 70%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  background: yellow;
+  justify-content: center;
+  align-items: center;
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: red;
+  color: coral;
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 34, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: whitesmoke;
+  transform: rotateY(180deg);
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
